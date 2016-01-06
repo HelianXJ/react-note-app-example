@@ -33,6 +33,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-nodemon');
 
     grunt.registerTask('default', [
-        'browserify'
+        'browserify',
+        'nodemon'
     ]);
 };
