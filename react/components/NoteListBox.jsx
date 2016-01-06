@@ -24,6 +24,12 @@ var NoteListBox = React.createClass({
 		this.unsubscribe();
 	},
 
+	onAdd: function (argument) {
+		event.preventDefault();
+        this.props.onAdd();
+        this.refs.noteList.setActiveNote(null);
+	},
+
 	render: function() {
         return (
             <div className="col-md-4">
