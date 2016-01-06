@@ -7,13 +7,13 @@ Reflux + React
 Reflux是根据React的flux创建的单向数据流类库。整个过程的对接是通过事件驱动的
 
 Reflux的单向数据流模式主要由actions和stores组成
-
+```javascript 
 ╔═════════╗       ╔════════╗       ╔═════════════════╗
 ║ Actions ║──────>║ Stores ║──────>║ View Components ║
 ╚═════════╝       ╚════════╝       ╚═════════════════╝
      ^                                      │
      └──────────────────────────────────────┘
-     
+```javascript 
      
 ### React Flux相比的不同点
 
