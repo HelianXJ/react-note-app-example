@@ -19907,7 +19907,7 @@ var TextArea = React.createClass({displayName: 'TextArea',
 module.exports = TextArea;
 },{"../../stores/NoteStore":168,"react":146}],168:[function(require,module,exports){
 var Reflux = require('reflux');
-var NoteAction = require('../actions/NoteActions');
+var NoteActions = require('../actions/NoteActions');
 
 var _notes = [];//This is private notes arrayvar
 

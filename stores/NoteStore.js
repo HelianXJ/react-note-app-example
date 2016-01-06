@@ -1,5 +1,5 @@
 var Reflux = require('reflux');
-var NoteAction = require('../actions/NoteActions');
+var NoteActions = require('../actions/NoteActions');
 
 var _notes = [];//This is private notes arrayvar
 
