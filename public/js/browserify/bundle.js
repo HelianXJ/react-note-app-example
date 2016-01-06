@@ -19927,7 +19927,7 @@ var NoteStore = Reflux.createStore({
 	onEdit: function (note) {
 		// Update the particular note item with new text.
 		for (var i = 0; i < _notes.length; i++ ) {
-			if (_notes[i]._id === id) {
+			if (_notes[i]._id === note._id) {
 				_notes[i].text = note.text;
 				this.trigger(_notes);
 				break;
