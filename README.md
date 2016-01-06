@@ -24,3 +24,9 @@ Reflux的单向数据流模式主要由actions和stores组成
 * waitFor被连续和平行的数据流所替代
 
 
+### 运行步骤
+```javascript
+     $ npm install
+     $ grunt    
+```
+在 localhost:8003 访问
