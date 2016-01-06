@@ -1,36 +1,38 @@
+/**
+ * @jsx React.DOM
+ */
+
 var React = require('react');
 var NoteList = require('./NoteList.jsx');
 var NoteStore = require('../../stores/NoteStore');
 
 var NoteListBox = React.createClass({
 
-	getInitialState: function () {
-		return {
-			notes: NoteStore.getNotes()
-		};
-	},
+    getInitialState: function () {
+      return {notes:NoteStore.getNotes()}
+    },
 
-	onChange: function (notes) {
-		this.setState ({
-			notes: notes
-		});
-	},
+    onChange: function (notes) {
+        this.setState({
+            notes: notes
+        });
+    },
 
-	componentDidMount: function () {
-		this.unsubscribe = NoteStore.listen(this.onChange);
-	},
+    componentDidMount: function() {
+        this.unsubscribe = NoteStore.listen(this.onChange);
+    },
 
-	componentWillUnmount: function () {
-		this.unsubscribe();
-	},
+    componentWillUnmount: function() {
+        this.unsubscribe();
+    },
 
-	onAdd: function (argument) {
-		event.preventDefault();
+    onAdd: function(event) {
+        event.preventDefault();
         this.props.onAdd();
         this.refs.noteList.setActiveNote(null);
-	},
+    },
 
-	render: function() {
+    render: function () {
         return (
             <div className="col-md-4">
                 <div className="centered"><a href="" onClick={this.onAdd}>Add New</a></div>

@@ -1,22 +1,26 @@
+/**
+ * @jsx React.DOM
+ */
+
 var React = require('react');
 var NoteListBox = require('./NoteListBox.jsx');
 var NoteCreationBox = require('./NoteCreationBox.jsx');
 
-var NoteApp = React.creatClass({
+var NoteApp = React.createClass({
 
-	getInitialState: function () {
-		return {id: null};
-	},
+    getInitialState: function () {
+        return {id:null}
+    },
 
-	onEdit: function () {
-		this.setState({currentlyEdited:id});
-	},
+    onEdit: function (id) {
+        this.setState({currentlyEdited:id});
+    },
 
-	onAdd: function () {
-		this.setState({currentlyEdited:null});
-	},
+    onAdd: function () {
+        this.setState({currentlyEdited:null});
+    },
 
-	render: function() {
+    render: function () {
         return (
             <div className="container">
                 <div className="row header">

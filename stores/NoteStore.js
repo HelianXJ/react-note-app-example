@@ -1,5 +1,5 @@
 var Reflux = require('reflux');
-var NoteAction = require('../actions/NoteAction');
+var NoteAction = require('../actions/NoteActions');
 
 var _notes = [];//This is private notes arrayvar
 
@@ -7,7 +7,7 @@ var NoteStore = Reflux.createStore({
 	// Here we listen to actions and register callbacks
 	init: function () {
 		this.listenTo(NoteActions.createNote, this.onCreate);
-		this.listenTo(NoteActions.editNote), this.onEdit);
+		this.listenTo(NoteActions.editNote, this.onEdit);
 	},
 
 	onCreate: function (note) {
